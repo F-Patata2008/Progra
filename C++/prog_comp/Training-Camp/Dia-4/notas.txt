@@ -1,0 +1,8 @@
+Bottom-Up v/s Top-Down
+
+
+Bottom-Up:
+    Parte de abajo hacia arriba, que seria el dp recursivo de atras para adelante
+    como el visto de ayer, de los saltos. Usa memorizacion.
+
+Top-Down

@@ -1,0 +1,18 @@
+Busqueda Binaria
+
+Revisamos punto ubicado en el medio,
+para saber si lo que buscamos esta
+antes o dsp
+
+Psedo-Code:
+
+    definir l, r; //limites
+    while (r-l sea grande) {
+        m = (r-l)/2
+        if (mayor) {
+            l = m+1
+        }
+        if (menor) {
+            r = m
+        }
+    }
