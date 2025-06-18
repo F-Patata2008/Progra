@@ -23,3 +23,34 @@ Haciendo push...
 branch 'main' set up to track 'origin/main'.
 [2025-06-14 12:28:56] ✅ Push exitoso
 ========== 2025-06-18 10:12:47 ==========
+Mensaje de commit (dejar vacío para 'Auto-commit'): Haciendo commit...
+[main 674d61a] Auto-commit: 2025-06-18 10:12:47
+ 25 files changed, 367 insertions(+)
+ create mode 100644 C++/prog_comp/Probs/kattis/algo.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/bee.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/carrots.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/chicken.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/dif.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/faktor.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/hacks.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/halloween.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/input.txt
+ create mode 100644 C++/prog_comp/Probs/kattis/last.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/loop.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/moose.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/moscow.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/planina.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/qaly.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/quadrant.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/r2.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/romans.cpp
+ create mode 100644 C++/prog_comp/Probs/kattis/tarifa.cpp
+ create mode 100755 C++/prog_comp/Probs/kattis/tester
+ create mode 100644 C++/prog_comp/Probs/usaco/shell.cpp
+ create mode 100644 C++/prog_comp/Probs/usaco/shell.in
+ create mode 100644 C++/prog_comp/Probs/usaco/shell.out
+ create mode 100755 C++/prog_comp/Probs/usaco/tester
+Haciendo push...
+branch 'main' set up to track 'origin/main'.
+[2025-06-18 10:12:47] ✅ Push exitoso
+========== 2025-06-18 10:13:45 ==========
