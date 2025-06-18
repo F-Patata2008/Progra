@@ -61,3 +61,23 @@ Haciendo push...
 branch 'main' set up to track 'origin/main'.
 [2025-06-18 10:13:45] ✅ Push exitoso
 ========== 2025-06-18 16:31:34 ==========
+Mensaje de commit (dejar vacío para 'Auto-commit'): Haciendo commit...
+[main f0dbc2b] Auto-commit: 2025-06-18 16:31:34
+ 14 files changed, 129 insertions(+), 16 deletions(-)
+ create mode 100644 C++/prog_comp/Probs/usaco/milk/milk.cpp
+ create mode 100644 C++/prog_comp/Probs/usaco/milk/mixmilk.in
+ create mode 100644 C++/prog_comp/Probs/usaco/milk/mixmilk.out
+ create mode 100755 C++/prog_comp/Probs/usaco/milk/tester
+ rename C++/prog_comp/Probs/usaco/{ => shell}/shell.cpp (60%)
+ rename C++/prog_comp/Probs/usaco/{ => shell}/shell.in (100%)
+ rename C++/prog_comp/Probs/usaco/{ => shell}/shell.out (100%)
+ rename C++/prog_comp/Probs/usaco/{ => shell}/tester (63%)
+ create mode 100644 C++/prog_comp/Probs/usaco/signal/cowsignal.in
+ create mode 100644 C++/prog_comp/Probs/usaco/signal/cowsignal.out
+ create mode 100644 C++/prog_comp/Probs/usaco/signal/signal.cpp
+ create mode 100755 C++/prog_comp/Probs/usaco/signal/tester
+ create mode 100644 C++/prog_comp/Probs/usaco/speeding/speeding.cpp
+Haciendo push...
+branch 'main' set up to track 'origin/main'.
+[2025-06-18 16:31:34] ✅ Push exitoso
+========== 2025-06-18 17:05:25 ==========
