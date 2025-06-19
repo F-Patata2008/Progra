@@ -81,3 +81,16 @@ Haciendo push...
 branch 'main' set up to track 'origin/main'.
 [2025-06-18 16:31:34] ✅ Push exitoso
 ========== 2025-06-18 17:05:25 ==========
+Mensaje de commit (dejar vacío para 'Auto-commit'): Haciendo commit...
+[main 5451397] Auto-commit: 2025-06-18 17:05:25
+ 8 files changed, 75 insertions(+)
+ create mode 100644 C++/prog_comp/Probs/usaco/speeding/speeding.in
+ create mode 100644 C++/prog_comp/Probs/usaco/speeding/speeding.out
+ create mode 100755 C++/prog_comp/Probs/usaco/speeding/tester
+ create mode 100644 C++/prog_comp/Probs/usaco/traffic/traffic.cpp
+ create mode 100644 C++/prog_comp/Probs/usaco/traffic/traffic.in
+ create mode 100644 C++/prog_comp/Probs/usaco/traffic/traffic.out
+Haciendo push...
+branch 'main' set up to track 'origin/main'.
+[2025-06-18 17:05:25] ✅ Push exitoso
+========== 2025-06-19 15:37:28 ==========
