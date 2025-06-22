@@ -94,3 +94,13 @@ Haciendo push...
 branch 'main' set up to track 'origin/main'.
 [2025-06-18 17:05:25] ✅ Push exitoso
 ========== 2025-06-19 15:37:28 ==========
+Mensaje de commit (dejar vacío para 'Auto-commit'): Haciendo commit...
+[main 75d8455] Auto-commit: 2025-06-19 15:37:28
+ 4 files changed, 51 insertions(+)
+ create mode 100644 C++/prog_comp/Probs/usaco/input.txt
+ create mode 100644 C++/prog_comp/Probs/usaco/maxdistance.cpp
+ create mode 100755 C++/prog_comp/Probs/usaco/tester
+Haciendo push...
+branch 'main' set up to track 'origin/main'.
+[2025-06-19 15:37:28] ✅ Push exitoso
+========== 2025-06-21 20:50:19 ==========
