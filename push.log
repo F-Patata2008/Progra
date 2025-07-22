@@ -138,3 +138,20 @@ Haciendo push...
 branch 'main' set up to track 'origin/main'.
 [2025-07-15 18:16:15] ✅ Push exitoso
 ========== 2025-07-21 22:44:54 ==========
+Mensaje de commit (dejar vacío para 'Auto-commit'): Haciendo commit...
+[main de44754] Auto-commit: 2025-07-21 22:44:54
+ 12 files changed, 604 insertions(+)
+ create mode 100644 C++/prog_comp/CIPC/Apunte/Apunte.aux
+ create mode 100644 C++/prog_comp/CIPC/Apunte/Apunte.fdb_latexmk
+ create mode 100644 C++/prog_comp/CIPC/Apunte/Apunte.fls
+ create mode 100644 C++/prog_comp/CIPC/Apunte/Apunte.log
+ create mode 100644 C++/prog_comp/CIPC/Apunte/Apunte.pdf
+ create mode 100644 C++/prog_comp/CIPC/Apunte/Apunte.synctex.gz
+ create mode 100644 C++/prog_comp/CIPC/Apunte/Apunte.tex
+ create mode 100644 C++/prog_comp/CIPC/Apunte/Apunte.toc
+ create mode 100644 C++/prog_comp/CIPC/Apunte/images/IN.png
+ create mode 100644 C++/prog_comp/CIPC/Apunte/images/gatito.png
+ create mode 100644 C++/prog_comp/CIPC/Apunte/images/patata.png
+Haciendo push...
+branch 'main' set up to track 'origin/main'.
+[2025-07-21 22:44:54] ✅ Push exitoso
