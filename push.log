@@ -162,3 +162,21 @@ Mensaje de commit (dejar vacío para 'Auto-commit'): Haciendo commit...
 Haciendo push...
 branch 'main' set up to track 'origin/main'.
 [2025-07-22 09:17:17] ✅ Push exitoso
+========== 2025-07-23 09:30:21 ==========
+Mensaje de commit (dejar vacío para 'Auto-commit'): Haciendo commit...
+[main b4b5ec9] Auto-commit: 2025-07-23 09:30:21
+ 20 files changed, 367 insertions(+), 16 deletions(-)
+ create mode 100644 C++/prog_comp/CIPC/.clangd
+ create mode 100644 C++/prog_comp/CIPC/Dia-1/.clangd
+ create mode 100644 C++/prog_comp/CIPC/Dia-1/Probs/b.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-1/Probs/c.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-1/Probs/d.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-1/Probs/f.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-1/Probs/g.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-1/Probs/input.txt
+ create mode 100644 C++/prog_comp/CIPC/Dia-1/Probs/k.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-1/Probs/l.cpp
+ create mode 100755 C++/prog_comp/CIPC/Dia-1/Probs/tester
+ create mode 100644 C++/prog_comp/Estudios/algo.cpp
+Haciendo push...
+========== 2025-07-23 09:37:22 ==========
