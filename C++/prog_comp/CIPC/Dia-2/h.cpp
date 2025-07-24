@@ -14,8 +14,7 @@ void solve() {
         cin >> a[i];
     }
 
-
-    std::vector<bool> checks(n - 1);
+    vec<bool> checks(n - 1);
     for (int i = 0; i < n - 1; ++i) {
         if (a[i] < 2LL * a[i+1]) {
             checks[i] = true;
@@ -46,7 +45,7 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        solver();
+        solve();
     }
     return 0;
 }
