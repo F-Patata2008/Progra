@@ -216,3 +216,46 @@ Haciendo push...
 branch 'main' set up to track 'origin/main'.
 [2025-07-23 22:24:25] ✅ Push exitoso
 ========== 2025-07-23 22:44:05 ==========
+Mensaje de commit (dejar vacío para 'Auto-commit'): Haciendo commit...
+[main ef60632] Auto-commit: 2025-07-23 22:44:05
+ 38 files changed, 1 insertion(+)
+ rename {C++/prog_comp/CIPC => CIPC}/.clangd (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Apunte/Apunte.aux (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Apunte/Apunte.fdb_latexmk (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Apunte/Apunte.fls (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Apunte/Apunte.log (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Apunte/Apunte.pdf (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Apunte/Apunte.synctex.gz (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Apunte/Apunte.tex (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Apunte/Apunte.toc (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Apunte/images/IN.png (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Apunte/images/gatito.png (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Apunte/images/patata.png (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-1/.clangd (100%)
+ rename {C++/prog_comp/CIPC/Dia-1/Probs => CIPC/Dia-1}/b.cpp (100%)
+ rename {C++/prog_comp/CIPC/Dia-1/Probs => CIPC/Dia-1}/c.cpp (100%)
+ rename {C++/prog_comp/CIPC/Dia-1/Probs => CIPC/Dia-1}/d.cpp (100%)
+ rename {C++/prog_comp/CIPC/Dia-1/Probs => CIPC/Dia-1}/f.cpp (100%)
+ rename {C++/prog_comp/CIPC/Dia-1/Probs => CIPC/Dia-1}/g.cpp (100%)
+ rename {C++/prog_comp/CIPC/Dia-1/Probs => CIPC/Dia-1}/input.txt (100%)
+ rename {C++/prog_comp/CIPC/Dia-1/Probs => CIPC/Dia-1}/k.cpp (100%)
+ rename {C++/prog_comp/CIPC/Dia-1/Probs => CIPC/Dia-1}/l.cpp (100%)
+ rename {C++/prog_comp/CIPC/Dia-1/Probs => CIPC/Dia-1}/tester (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-2/.clangd (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-2/a.cpp (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-2/b.cpp (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-2/c.cpp (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-2/d.cpp (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-2/e.cpp (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-2/f.cpp (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-2/g.cpp (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-2/h.cpp (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-2/i.cpp (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-2/j.cpp (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-2/k.cpp (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-2/l.cpp (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-2/out.txt (100%)
+ rename {C++/prog_comp/CIPC => CIPC}/Dia-2/tester (100%)
+Haciendo push...
+branch 'main' set up to track 'origin/main'.
+[2025-07-23 22:44:05] ✅ Push exitoso
