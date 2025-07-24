@@ -187,3 +187,24 @@ Haciendo push...
 branch 'main' set up to track 'origin/main'.
 [2025-07-23 09:37:22] ✅ Push exitoso
 ========== 2025-07-23 21:22:09 ==========
+Mensaje de commit (dejar vacío para 'Auto-commit'): Haciendo commit...
+[main fc0225d] Dia 2 CIPC
+ 16 files changed, 488 insertions(+)
+ create mode 100644 C++/prog_comp/CIPC/Dia-2/.clangd
+ create mode 100644 C++/prog_comp/CIPC/Dia-2/a.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-2/b.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-2/c.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-2/d.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-2/e.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-2/f.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-2/g.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-2/h.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-2/i.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-2/j.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-2/k.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-2/l.cpp
+ create mode 100644 C++/prog_comp/CIPC/Dia-2/out.txt
+ create mode 100755 C++/prog_comp/CIPC/Dia-2/tester
+Haciendo push...
+branch 'main' set up to track 'origin/main'.
+[2025-07-23 21:22:09] ✅ Push exitoso
