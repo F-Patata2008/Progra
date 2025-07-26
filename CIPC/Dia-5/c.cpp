@@ -23,7 +23,10 @@ int main() {
             else {
                 cout << "YES\n";
                 for (int i = 0; i < size(ussr);) {
-                    if (i != size(ussr) - 1) cout << ussr[i];
+                    if (i == size(ussr) - 1) {
+                        cout << ussr[i];
+                        i++;
+                    }
                     else if (ussr[i] != ussr[i + 1]) {
                         cout << ussr[i + 1] << ussr[i];
                         i += 2;
