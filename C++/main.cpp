@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <iterator>
 using namespace std;
 
 typedef long long ll;
@@ -7,5 +8,10 @@ typedef string str;
 
 int main() {
     cout << "Mundo Hola" << endl;
+    int a;
+
+    cin >> a;
+
+    cout << sizeof(a);
     return 0;
 }
