@@ -405,3 +405,16 @@ Haciendo push...
 branch 'main' set up to track 'origin/main'.
 [2025-07-30 12:58:44] ✅ Push exitoso
 ========== 2025-07-30 23:27:57 ==========
+Mensaje de commit (dejar vacío para 'Auto-commit'): Haciendo commit...
+[main b574233] Patata: 2025-07-30 23:27:57
+ 8 files changed, 196 insertions(+)
+ create mode 100644 CIPC/Dia-8/a.cpp
+ create mode 100644 CIPC/Dia-8/d.cpp
+ create mode 100644 CIPC/Dia-8/g.cpp
+ create mode 100644 CIPC/Dia-8/i.cpp
+ create mode 100644 CIPC/Dia-8/k.cpp
+ create mode 100644 CIPC/Dia-8/out
+ create mode 100755 CIPC/Dia-8/tester
+Haciendo push...
+branch 'main' set up to track 'origin/main'.
+[2025-07-30 23:27:57] ✅ Push exitoso
