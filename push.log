@@ -441,3 +441,12 @@ Haciendo push...
 branch 'main' set up to track 'origin/main'.
 [2025-07-31 23:18:35] ✅ Push exitoso
 ========== 2025-08-01 01:13:41 ==========
+Mensaje de commit (dejar vacío para 'Auto-commit'): Haciendo commit...
+[main 3a1c373] Patata: 2025-08-01 01:13:41
+ 9 files changed, 140 insertions(+), 34 deletions(-)
+ create mode 100644 CIPC/Dia-3/k.cpp
+ create mode 100644 CIPC/Dia-4/f.cpp
+ create mode 100644 CIPC/Dia-4/out
+Haciendo push...
+branch 'main' set up to track 'origin/main'.
+[2025-08-01 01:13:41] ✅ Push exitoso
