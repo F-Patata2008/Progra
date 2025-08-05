@@ -465,3 +465,12 @@ Haciendo push...
 branch 'main' set up to track 'origin/main'.
 [2025-08-04 18:44:17] ✅ Push exitoso
 ========== 2025-08-04 21:21:03 ==========
+Mensaje de commit (dejar vacío para 'Auto-commit'): Haciendo commit...
+[main 2353ae1] Auto-commit: 2025-08-04 21:21:03
+ 11 files changed, 3156 insertions(+), 435 deletions(-)
+ create mode 100644 CIPC/Apunte/Apunte.out
+ delete mode 100644 CIPC/Apunte/Apunte.pdf
+ delete mode 100644 CIPC/Apunte/Apunte.synctex.gz
+Haciendo push...
+branch 'main' set up to track 'origin/main'.
+[2025-08-04 21:21:03] ✅ Push exitoso
