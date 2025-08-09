@@ -10,13 +10,15 @@ int main() {
     cin >> n;
     
     int sum = 0;
+    int suma = 0;
+    for (int i = 0; i <= n; i++) suma += i;
 
     for (int i = 0; i < n - 1; i++) {
         int a;
         cin >> a;
         sum += a;
     }
-    cout << n - sum << endl;
+    cout << suma - sum << endl;
 
     return 0;
 }
