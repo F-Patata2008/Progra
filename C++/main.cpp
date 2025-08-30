@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 typedef long long ll;
@@ -6,11 +7,14 @@ typedef string str;
 #define vec vector
 
 int main() {
-    cout << "Mundo Hola" << endl;
-    int a;
+    int n, i;
+    cin >> n >> i;
+    double sum = 0;
+    sum = (double) n/i;
 
-    cin >> a;
+    cout << fixed << setprecision(200) << sum <<"\n";
+    //cout << sum << " " << sum/i << endl;
 
-    cout << sizeof(a);
+
     return 0;
 }
