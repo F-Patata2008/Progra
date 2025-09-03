@@ -28,4 +28,4 @@ To run a specific solution, navigate to its directory and execute the script. Ma
 
 ## About the Author
 
-This repository is maintained by **F-Patata2008**. It serves as a personal archive of my journey and progress in the world of competitive programming.
+This repository is maintained by **F-Patata2008**. It serves as a personal archive of my journey and progress in the world of competitive programming and general programming.
