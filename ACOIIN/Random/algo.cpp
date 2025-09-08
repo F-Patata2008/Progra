@@ -9,6 +9,8 @@ int main() {
     cin >> n >> m;
     for (int i = 0; i < n*m; i++) {
         println("mundo hola\n");
+        cout << "Patata\n";
     }
+    cout << endl;
     return 0;
 }
