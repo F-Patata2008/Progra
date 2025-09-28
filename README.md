@@ -1,6 +1,7 @@
 # Progra
 
 This repository contains a collection of solutions to competitive programming problems, as well as materials from various training camps and competitions. The solutions are primarily in C++, with some Python code also included.
+tengo q orenar als oarchivos
 
 ## Repository Structure
 
