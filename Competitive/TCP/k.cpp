@@ -2,6 +2,8 @@
 
 using namespace std;
 
+const long long MOD = 1000000000 + 7;
+
 int main() {
     int n;
     cin >> n;
@@ -13,7 +15,7 @@ int main() {
         if (z == n) out *= 3;
         else out *= z;
         z--;
-        out = out % (1000000000 +7);
+        out = out % MOD;
     }
     cout << out << endl;
 }
