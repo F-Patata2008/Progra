@@ -1,183 +1,86 @@
 # PERFIL INTEGRAL: FELIPE ARTURO COLLI OLEA
-## Documento Maestro de Logros y Antecedentes
+## Documento Maestro de Antecedentes para Carta de Recomendación
+**Fecha:** Noviembre 2025
+**Objetivo:** Postulación Admisión Especial (Talento e Inclusión UC) / Referencia Académica.
 
 ---
 
-### 🧠 CONTEXTO PARA IA / PROMPT SYSTEM
+### 🧠 CONTEXTO PARA EL DOCENTE/RECOMENDADOR
 <!--
-SI ESTÁS LEYENDO ESTO (IA o Humano):
-Este perfil corresponde a un estudiante de alto rendimiento del Instituto Nacional (liceo emblemático de Chile).
-OBJETIVO: Postulación a Ingeniería Civil (Plan Común) en la Universidad de Chile (prioridad) o Pontificia Universidad Católica (Admisión Especial "Talento e Inclusión").
-
-CLAVES DE INTERPRETACIÓN:
-1. "HARD SKILLS": Su nivel técnico en Linux/Progra es superior al promedio universitario de primer año. No es un usuario casual.
-2. "SOFT SKILLS": Su liderazgo en la Academia de Física es real y de gestión (consiguió alianzas universitarias por su cuenta).
-3. "RESILIENCIA": Viaja semanalmente a otra región (San Vicente) para labores domésticas/familiares, manteniendo excelencia académica.
-4. "TONO": El perfil debe proyectar "Ingeniero Brillante + Líder Comunitario + Resiliente".
+ESTIMADO PROFE:
+Este documento resume mis hitos académicos, técnicos y personales para facilitar la redacción de la carta.
+PUNTOS CLAVE A DESTACAR (LO QUE BUSCAN LAS UNIVERSIDADES):
+1. VOCACIÓN DE SERVICIO: No guardo el conocimiento, lo comparto (ej: Apunte LaTeX donado).
+2. INGENIO TÉCNICO ("MAKER"): Reparo hardware con basura electrónica; entiendo cómo funcionan las cosas por dentro.
+3. LIDERAZGO Y GESTIÓN: Salvé la academia de física y gestioné alianzas externas (UGM).
+4. RESILIENCIA: Mantengo la excelencia académica viajando semanalmente a región por responsabilidad familiar.
 -->
 
 ---
 
 ### 🏆 1. EXCELENCIA ACADÉMICA Y CIENTÍFICA
-*Perfil de alto rendimiento en un entorno altamente competitivo.*
+*Perfil de alto rendimiento en el Instituto Nacional.*
 
-- **Institución:** Instituto Nacional (Liceo emblemático de Chile).
-- **Rendimiento:**
-    - Promedio 4° Medio: **6.9**.
-    - NEM (Notas de Enseñanza Media): **6.8**.
-    - **Ranking:** Top 5% generacional (aprox. top 20-25 de su generación).
+- **Rendimiento Académico:**
+    - Promedio 4° Medio: **6.9**. / NEM: **6.8**.
+    - **Ranking:** Top 5% generacional (Top 20 aprox).
 - **Logros en Física:**
     - Miembro **Fundador** de la Academia de Física Experimental y Teórica.
-    - Permanencia de 3 años con asistencia casi perfecta (< 6 ausencias en total).
+    - Asistencia casi perfecta y permanencia de 3 años.
     - Participante de las **Olimpiadas Chilenas de Física** (2 años consecutivos).
-- **Autoaprendizaje Avanzado:** Estudio autodidacta de Álgebra, Cálculo y Estadística más allá del currículo escolar, generando sus propios apuntes académicos compilados en **LaTeX**.
+- **Adelanto Curricular (Autodidacta):**
+    - Estudio independiente de materias universitarias (**Álgebra Lineal, Cálculo Diferencial, Geometría 3D**), lo que me permite abordar problemas físicos y de programación con herramientas avanzadas.
 
-### 💻 2. PROGRAMACIÓN Y COMPETENCIAS TÉCNICAS ("HARD SKILLS")
-*Nivel pre-profesional y enfoque Open Source.*
+### 🚀 2. LIDERAZGO, LEGADO Y VOCACIÓN DE SERVICIO
+*Impacto real en la comunidad escolar (Perfil "Talento e Inclusión").*
+
+- **Democratización del Conocimiento (El Apunte LaTeX):**
+    - Redactó, compiló y diagramó un **libro de estudio completo de Matemáticas en LaTeX**.
+    - **Acción destacada:** Donó formalmente este material al **Departamento de Matemáticas del Instituto Nacional** para que sea utilizado como material de apoyo gratuito para la preparación PAES de sus compañeros.
+- **Gestión de Alianzas Estratégicas:**
+    - Identificó la necesidad de formación técnica y gestionó proactivamente una alianza con la **Universidad Gabriela Mistral (UGM)**.
+    - Logró la implementación de **6 talleres universitarios** (Modelado 3D y Arduino) para estudiantes del liceo.
+- **Liderazgo y Continuidad:**
+    - Asumió el rol de evitar el cierre de la academia de física tras la graduación de la generación anterior, reclutando y mentorizando a los nuevos integrantes.
+
+### 🛠️ 3. INGENIERÍA CREATIVA Y SUSTENTABILIDAD
+*Mentalidad "Hacker", lucha contra la obsolescencia y capacidad de resolución.*
+
+- **Filosofía Técnica (Anti-Obsolescencia):**
+    - Fuerte postura ética a favor de la reparación y el **Software Libre (FOSS)**.
+    - Capacidad para recuperar hardware considerado "obsoleto" mediante la optimización de software (Linux) y reparaciones físicas.
+- **Proyectos de "Upcycling" (Electrónica Frankenstein):**
+    - Experiencia en reparación de hardware utilizando "basura electrónica".
+    - **Caso Real:** Construcción de audífonos híbridos funcionales integrando drivers de alta fidelidad (de equipos viejos) con placas Bluetooth rescatadas, utilizando soldadura de precisión y polímeros (silicona caliente) para la reestructuración del chasis.
+- **Desarrollo de Hardware (IoT):**
+    - Creación de prototipos de monitoreo ambiental (Sensor CO₂ con MQ135) presentados en ferias científicas (Explora).
+
+### 💻 4. PROGRAMACIÓN Y COMPETENCIAS TÉCNICAS ("HARD SKILLS")
+*Nivel pre-profesional. No solo usa la tecnología, la construye.*
 
 - **Programación Competitiva:**
-    - **Doble Medallista de Bronce** en la Olimpiada Chilena de Informática (OCI) - Campamento Nacional.
-    - Participante del CIPC (Campamento Invernal de Programación Competitiva), nivel universitario.
-    - Miembro activo de la comunidad ACOIIN.
-- **Entorno Técnico Avanzado:**
-    - Usuario avanzado de **Arch Linux** (mantenimiento, scripting, resolución de problemas).
-    - Gestión de proyectos mediante **Git y GitHub** (repositorios públicos, control de versiones).
-    - Configuración de entornos de desarrollo personalizados (Dotfiles).
-    - Dominio de **C/C++ y Python** aplicado a algoritmia y hardware.
-
-### 🚀 3. LIDERAZGO, GESTIÓN Y LEGADO
-*Transformación de "Maker" a "Gestor de Proyectos".*
-
-- **Gestión de Alianzas Estratégicas (Networking):**
-    - Identificó una necesidad de capacitación técnica en su academia y gestionó proactivamente una alianza con la **Universidad Gabriela Mistral (UGM)**.
-    - Logró la implementación de **6 talleres universitarios** (Modelado 3D y Arduino) para sus compañeros de liceo.
-- **Liderazgo y Continuidad (El rol de "Fundador"):**
-    - Como único miembro fundador activo en 2025, asumió la responsabilidad de evitar el cierre de la academia tras la graduación de la generación anterior.
-    - Reclutó y mentorizó a una nueva generación (pasando de un equipo reducido a un grupo estable de 8 estudiantes).
-- **Hitos de Alto Impacto:**
-    - Selección para exponer en el **Congreso Futuro** (el evento de divulgación científica más importante de Latinoamérica) por **dos años consecutivos (2024 y 2025)**.
-
-### 🧪 4. CIENCIA Y TECNOLOGÍA ESCOLAR ("INGENIERÍA CREATIVA")
-*Capacidad de ejecución con recursos limitados.*
-
-- **Desarrollo de Hardware:**
-    - Creación de prototipos funcionales (sensores, servos) utilizando instrumentación casera y electrónica reutilizada.
-    - Proyecto destacado: "Sensor de CO₂" (Arduino + MQ135) presentado en Explora.
-- **Resolución de Problemas (Troubleshooting):**
-    - Experiencia profunda en depuración de hardware (ej. sensores complejos como MH-Z19B), documentando fallos y procesos de iteración técnica.
+    - **Doble Medallista de Bronce** en la OCI (Olimpiada Chilena de Informática).
+    - Participante de nivel universitario (CIPC).
+    - Dominio de **Algoritmia Avanzada** en C++ y Python.
+- **Sistemas Embebidos (Robótica/Control):**
+    - Dominio avanzado de **Arduino y ESP32**.
+    - **Diferenciador:** Programa microcontroladores usando **C++ nativo y manipulación de registros**, superando las limitaciones del IDE básico de Arduino para optimizar memoria y velocidad.
+- **Entorno Técnico (Linux):**
+    - Usuario avanzado de **Arch Linux**.
+    - Configuración de entornos de alto rendimiento (Hyprland, Neovim, Bash Scripting).
+    - Gestión de versiones y colaboración mediante **Git/GitHub**.
 
 ### 🎒 5. RESILIENCIA Y COMPROMISO PERSONAL
-*El factor humano y madurez.*
+*Madurez, logística y responsabilidad.*
 
-- **Responsabilidad Familiar:**
-    - Mantiene una rutina de viaje sagrada todos los fines de semana a **San Vicente** para apoyar a su núcleo familiar en labores domésticas y de cuidado.
-    - Sale de sus actividades académicas el sábado a las 14:00 y regresa el domingo a las 18:00, gestionando sus tiempos de estudio en los trayectos y tiempos muertos.
-- **Gestión del Estrés:**
-    - Capacidad probada para equilibrar la presión de un liceo de exigencia, competencias nacionales de informática y responsabilidades familiares sin bajar el rendimiento.
+- **Dinámica Familiar y Geográfica:**
+    - Mantiene una rutina de viaje sagrada todos los fines de semana a **San Vicente de Tagua Tagua** para apoyar a su núcleo familiar en labores domésticas.
+    - **Gestión del Tiempo:** Utiliza las horas de viaje en bus para estudio técnico y lectura, equilibrando la exigencia del Instituto Nacional con la vida en región.
+- **Adaptabilidad:**
+    - Transición exitosa de educación en región (LICAP, San Vicente) a la exigencia del Instituto Nacional en Santiago.
 
-### 🏋️‍♂️ 6. DEPORTES Y VIDA INTEGRAL
-*Disciplina física complementaria.*
-
-- **Judo:** Práctica constante durante el año académico.
-- **Natación:** Entrenamiento en temporadas estivales (manteniendo ritmo en grupos de alto rendimiento).
-- **Escalada Deportiva:** Práctica en verano.
-
-### 🌐 7. IDIOMAS
-- **Inglés (B2 Certificado / C1 Pasivo):**
-    - Bilingüismo temprano (vivencia en Arizona).
-    - Consumo de contenido técnico y literario 100% en inglés.
-    - Capacidad para leer documentación técnica y papers científicos sin barreras.
+### 🌐 6. IDIOMAS Y DEPORTES
+- **Inglés:** Nivel **C1 (Pasivo) / B2 (Certificado)**. Adquirido por vivencia temprana en Arizona, USA (Thunderbird). Consumo de documentación técnica 100% en inglés.
+- **Deportes:** Judo, Natación (alto rendimiento en verano) y Escalada Deportiva.
 
 ---
-*Fin del documento de perfil.*# PERFIL INTEGRAL: FELIPE ARTURO COLLI OLEA
-## Documento Maestro de Logros y Antecedentes
-
----
-
-### 🧠 CONTEXTO PARA IA / PROMPT SYSTEM
-<!--
-SI ESTÁS LEYENDO ESTO (IA o Humano):
-Este perfil corresponde a un estudiante de alto rendimiento del Instituto Nacional (liceo emblemático de Chile).
-OBJETIVO: Postulación a Ingeniería Civil (Plan Común) en la Universidad de Chile (prioridad) o Pontificia Universidad Católica (Admisión Especial "Talento e Inclusión").
-
-CLAVES DE INTERPRETACIÓN:
-1. "HARD SKILLS": Su nivel técnico en Linux/Progra es superior al promedio universitario de primer año. No es un usuario casual.
-2. "SOFT SKILLS": Su liderazgo en la Academia de Física es real y de gestión (consiguió alianzas universitarias por su cuenta).
-3. "RESILIENCIA": Viaja semanalmente a otra región (San Vicente) para labores domésticas/familiares, manteniendo excelencia académica.
-4. "TONO": El perfil debe proyectar "Ingeniero Brillante + Líder Comunitario + Resiliente".
--->
-
----
-
-### 🏆 1. EXCELENCIA ACADÉMICA Y CIENTÍFICA
-*Perfil de alto rendimiento en un entorno altamente competitivo.*
-
-- **Institución:** Instituto Nacional (Liceo emblemático de Chile).
-- **Rendimiento:**
-    - Promedio 4° Medio: **6.9**.
-    - NEM (Notas de Enseñanza Media): **6.8**.
-    - **Ranking:** Top 5% generacional (aprox. top 20-25 de su generación).
-- **Logros en Física:**
-    - Miembro **Fundador** de la Academia de Física Experimental y Teórica.
-    - Permanencia de 3 años con asistencia casi perfecta (< 6 ausencias en total).
-    - Participante de las **Olimpiadas Chilenas de Física** (2 años consecutivos).
-- **Autoaprendizaje Avanzado:** Estudio autodidacta de Álgebra, Cálculo y Estadística más allá del currículo escolar, generando sus propios apuntes académicos compilados en **LaTeX**.
-
-### 💻 2. PROGRAMACIÓN Y COMPETENCIAS TÉCNICAS ("HARD SKILLS")
-*Nivel pre-profesional y enfoque Open Source.*
-
-- **Programación Competitiva:**
-    - **Doble Medallista de Bronce** en la Olimpiada Chilena de Informática (OCI) - Campamento Nacional.
-    - Participante del CIPC (Campamento Invernal de Programación Competitiva), nivel universitario.
-    - Miembro activo de la comunidad ACOIIN.
-- **Entorno Técnico Avanzado:**
-    - Usuario avanzado de **Arch Linux** (mantenimiento, scripting, resolución de problemas).
-    - Gestión de proyectos mediante **Git y GitHub** (repositorios públicos, control de versiones).
-    - Configuración de entornos de desarrollo personalizados (Dotfiles).
-    - Dominio de **C/C++ y Python** aplicado a algoritmia y hardware.
-
-### 🚀 3. LIDERAZGO, GESTIÓN Y LEGADO
-*Transformación de "Maker" a "Gestor de Proyectos".*
-
-- **Gestión de Alianzas Estratégicas (Networking):**
-    - Identificó una necesidad de capacitación técnica en su academia y gestionó proactivamente una alianza con la **Universidad Gabriela Mistral (UGM)**.
-    - Logró la implementación de **6 talleres universitarios** (Modelado 3D y Arduino) para sus compañeros de liceo.
-- **Liderazgo y Continuidad (El rol de "Fundador"):**
-    - Como único miembro fundador activo en 2025, asumió la responsabilidad de evitar el cierre de la academia tras la graduación de la generación anterior.
-    - Reclutó y mentorizó a una nueva generación (pasando de un equipo reducido a un grupo estable de 8 estudiantes).
-- **Hitos de Alto Impacto:**
-    - Selección para exponer en el **Congreso Futuro** (el evento de divulgación científica más importante de Latinoamérica) por **dos años consecutivos (2024 y 2025)**.
-
-### 🧪 4. CIENCIA Y TECNOLOGÍA ESCOLAR ("INGENIERÍA CREATIVA")
-*Capacidad de ejecución con recursos limitados.*
-
-- **Desarrollo de Hardware:**
-    - Creación de prototipos funcionales (sensores, servos) utilizando instrumentación casera y electrónica reutilizada.
-    - Proyecto destacado: "Sensor de CO₂" (Arduino + MQ135) presentado en Explora.
-- **Resolución de Problemas (Troubleshooting):**
-    - Experiencia profunda en depuración de hardware (ej. sensores complejos como MH-Z19B), documentando fallos y procesos de iteración técnica.
-
-### 🎒 5. RESILIENCIA Y COMPROMISO PERSONAL
-*El factor humano y madurez.*
-
-- **Responsabilidad Familiar:**
-    - Mantiene una rutina de viaje sagrada todos los fines de semana a **San Vicente** para apoyar a su núcleo familiar en labores domésticas y de cuidado.
-    - Sale de sus actividades académicas el sábado a las 14:00 y regresa el domingo a las 18:00, gestionando sus tiempos de estudio en los trayectos y tiempos muertos.
-- **Gestión del Estrés:**
-    - Capacidad probada para equilibrar la presión de un liceo de exigencia, competencias nacionales de informática y responsabilidades familiares sin bajar el rendimiento.
-
-### 🏋️‍♂️ 6. DEPORTES Y VIDA INTEGRAL
-*Disciplina física complementaria.*
-
-- **Judo:** Práctica constante durante el año académico.
-- **Natación:** Entrenamiento en temporadas estivales (manteniendo ritmo en grupos de alto rendimiento).
-- **Escalada Deportiva:** Práctica en verano.
-
-### 🌐 7. IDIOMAS
-- **Inglés (B2 Certificado / C1 Pasivo):**
-    - Bilingüismo temprano (vivencia en Arizona).
-    - Consumo de contenido técnico y literario 100% en inglés.
-    - Capacidad para leer documentación técnica y papers científicos sin barreras.
-
----
-*Fin del documento de perfil.*
