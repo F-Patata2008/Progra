@@ -1,1 +1,13 @@
 push.log
+# Ignorar binarios y objetos compilados
+*.o
+*.out
+*.exe
+*.bin
+
+# Ignorar archivos de sistema o temporales
+.DS_Store
+thumbs.db
+
+# Si tus binarios no tienen extensión (Linux), es más difícil,
+# pero puedes ignorar la carpeta 'bin' o 'build' si ordenas tu código así.
