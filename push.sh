@@ -52,7 +52,7 @@ hizo_commit=false
     echo "Hay $commits_pendientes commits pendientes de subida."
     echo "Haciendo push..."
 
-    if git push -u origin main; then
+    if git push; then
       echo "[$timestamp] ✅ Push exitoso"
       notify-send "Git Auto Push" "✅ Se subieron cambios ($commits_pendientes commits)"
     else
