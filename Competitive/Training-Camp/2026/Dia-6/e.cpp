@@ -4,7 +4,7 @@ using namespace std;
 #define str string
 #define vec vector
 int n;
-ll k; 
+ll k;
 vec<ll> receta;
 vec<ll> disp;
 
@@ -36,12 +36,12 @@ int main() {
     for (int i = 0; i < n; i++) {
         cin >> disp[i];
     }
-    
+
     ll izq, der, mid;
-    ll respuesta = 0;    
+    ll respuesta = 0;
     izq = 0;
-    der = 2000000007; 
-    
+    der = 2000000007;
+
     while (izq <= der) {
         mid = izq + (der - izq) / 2;
         if (hornar(mid)) {
