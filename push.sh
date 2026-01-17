@@ -25,7 +25,7 @@ hizo_commit=false
 
   # Verificamos si hay algo en el área de stage listo para commitear
   if ! git diff --cached --quiet; then
-    
+
     # Hay cambios nuevos -> Pedimos mensaje
     echo -n "Mensaje de commit (Enter para 'Auto-commit'): "
     read commit_message
@@ -44,14 +44,14 @@ hizo_commit=false
   # ==========================================
   # FASE 2: PUSH (Si es necesario)
   # ==========================================
-  
+
   # Verificamos si hay commits locales que no están en el servidor
   commits_pendientes=$(git log origin/main..HEAD --oneline 2>/dev/null | wc -l)
 
   if [[ "$commits_pendientes" -gt 0 ]]; then
     echo "Hay $commits_pendientes commits pendientes de subida."
     echo "Haciendo push..."
-    
+
     if git push -u origin main; then
       echo "[$timestamp] ✅ Push exitoso"
       notify-send "Git Auto Push" "✅ Se subieron cambios ($commits_pendientes commits)"
