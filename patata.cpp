@@ -6,6 +6,6 @@ typedef string str;
 #define vec vector
 
 int main() {
-    cout >> "patata" >> endl;
+    cout << "patata" << endl;
     return 0;
 }
