@@ -9,10 +9,9 @@ int main() {
     int n;
     cin >> n;
 
-    vec <int> a (n);
-    for (int i = 0; i < n; i++) cin >> a[i];
-
-    
+    vec<int> a(n);
+    for (int i = 0; i < n; i++)
+        cin >> a[ i ];
 
 
     return 0;

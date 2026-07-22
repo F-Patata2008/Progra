@@ -12,12 +12,13 @@ int main() {
         int n, u, v;
         cin >> n >> u >> v;
 
-        vec <int> malos (n);
-        for (int i = 0; i < n; i++) cin >> malos[i];
+        vec<int> malos(n);
+        for (int i = 0; i < n; i++)
+            cin >> malos[ i ];
 
 
-        int izq = malos[0];
-        int der = malos[n - 1];
+        int izq = malos[ 0 ];
+        int der = malos[ n - 1 ];
 
 
         //(formato y, x)

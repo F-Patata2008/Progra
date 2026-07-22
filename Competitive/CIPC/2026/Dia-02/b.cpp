@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+
 #include <cctype>
 using namespace std;
 
@@ -7,6 +8,7 @@ typedef string str;
 #define vec vector
 
 int main() {
+    // a esta altura normalmnete se pone mi codigo, no las de abajo
     int t;
     cin >> t;
     while (t--) {
@@ -15,44 +17,43 @@ int main() {
 
         str ussr;
         cin >> ussr;
-
+        cout << endl;
         int sum = 0;
 
-        map<char,int> freq;
-        for (char c : ussr) freq[c]++;
+        map<char, int> freq;
+        for (char c : ussr)
+            freq[ c ]++;
         int s = 0;
         for (auto it = freq.begin(); it != freq.end(); ++it) {
             char act = it->first;
             if (islower(act)) {
                 if (freq.find(act - 32) != freq.end()) {
-                    int dif = min(freq[act - 32], it->second);
+                    int dif = min(freq[ act - 32 ], it->second);
                     sum += dif;
-                    freq[act] -= dif;
-                    freq[act - 32] -= dif;
+                    freq[ act ] -= dif;
+                    freq[ act - 32 ] -= dif;
                 }
-            }
-            else if (isupper(act)) {
+            } else if (isupper(act)) {
                 if (freq.find(act + 32) != freq.end()) {
-                    int dif = min(freq[act + 32], it->second);
+                    int dif = min(freq[ act + 32 ], it->second);
                     sum += dif;
-                    freq[act] -= dif;
-                    freq[act + 32] -= dif;
+                    freq[ act ] -= dif;
+                    freq[ act + 32 ] -= dif;
                 }
-
             }
         }
         for (auto it = freq.begin(); it != freq.end(); ++it) {
-            if (k == 0) break;
+            if (k == 0)
+                break;
             char act = it->first;
             while (it->second >= 2 && k > 0) {
                 k--;
-                freq[act] -= 2;
+                freq[ act ] -= 2;
                 sum++;
             }
         }
 
         cout << sum << endl;
-
     }
     return 0;
 }

@@ -7,20 +7,17 @@ typedef string str;
 #define vec vector
 
 
-
-
 int main() {
 
-    vec <ll> memo (1e7);
+    vec<ll> memo(1e7);
 
-    memo[0] = 2;
-    int sum  = 5;
+    memo[ 0 ] = 2;
+    int sum = 5;
 
     for (int i = 1; i < 1e7; i++) {
-        memo[i] = memo[i - 1] + sum;
+        memo[ i ] = memo[ i - 1 ] + sum;
         sum += 3;
     }
-
 
 
     int t;
@@ -33,13 +30,12 @@ int main() {
         while (n >= 2) {
             sum++;
             auto it = lower_bound(memo.begin(), memo.end(), n);
-            if (*it > n) --it;
+            if (*it > n)
+                --it;
             n -= *it;
-
         }
 
         cout << sum << endl;
-
     }
     return 0;
 }
