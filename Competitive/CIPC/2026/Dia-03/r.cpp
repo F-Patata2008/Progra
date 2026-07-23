@@ -1,0 +1,80 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+typedef string str;
+#define vec vector
+
+
+struct SegmentTree {
+    int n;
+    vec<ll> Tree;
+
+    SegmentTree(vec<ll> &a) {
+        n = a.size();
+        Tree.resize(4 * n);
+        build(a, 0, 0, n - 1);
+    }
+
+    void build(vec<ll> &a, int nodo, int izq, int der) {
+        if (izq == der) {
+            Tree[ nodo ] = a[ izq ];
+            return;
+        }
+        int mid = izq + (der - izq) / 2;
+        build(a, 2 * nodo + 1, izq, mid);
+        build(a, 2 * nodo + 2, mid + 1, der);
+        Tree[ nodo ] = max(Tree[ 2 * nodo + 1 ], Tree[ 2 * nodo + 2 ]);
+    }
+    ll q(int l, int r) {
+        return query(0, 0, n - 1, l, r);
+    }
+
+    ll query(int nodo, int izq, int der, int l, int r) {
+        if (r < izq || l > der)
+            return LLONG_MIN;
+        if (l <= izq && der <= r)
+            return Tree[ nodo ];
+        int mid = izq + (der - izq) / 2;
+        return max(query(2 * nodo + 1, izq, mid, l, r), query(2 * nodo + 2, mid + 1, der, l, r));
+    }
+};
+
+vector<ll> prefix_function(const string &s) {
+    int n = s.size();
+    vector<ll> pi(n, 0);
+    for (int i = 1; i < n; i++) {
+        int j = pi[ i - 1 ];
+        while (j > 0 && s[ i ] != s[ j ])
+            j = pi[ j - 1 ];
+        if (s[ i ] == s[ j ])
+            j++;
+        pi[ i ] = j;
+    }
+    return pi;
+}
+
+
+int main() {
+    str ussr;
+    cin >> ussr;
+    int n = ussr.size();
+
+    vec<ll> patata = prefix_function(ussr);
+    SegmentTree busc(patata);
+
+    if (patata[ n - 1 ] == 0) {
+        cout << "Just a legend" << endl;
+        return 0;
+    }
+    for (int i = patata[ n - 1 ]; i > 0; i = patata[ i - 1 ]) {
+        if (busc.q(0, n - 2) >= i) {
+            cout << ussr.substr(0, i) << endl;
+            return 0;
+        }
+    }
+    cout << "Just a legend" << endl;
+
+
+    return 0;
+}
