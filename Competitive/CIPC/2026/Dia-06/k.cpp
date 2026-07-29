@@ -12,7 +12,7 @@ int main() {
         ll n;
         cin >> n;
 
-        cout << (ll) ceil((ll) sqrt((ll) n)) - 1 << "\n";
+        cout << (ll) ceil(sqrtl(n)) - 1 << "\n";
     }
     cout << endl;
     return 0;
