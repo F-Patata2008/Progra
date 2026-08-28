@@ -1,0 +1,181 @@
+\documentclass[8pt,twocolumn]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.35in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{titlesec}
+
+\titleformat{\section}{\small\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\footnotesize\bfseries}{}{0em}{}
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+\titlespacing*{\subsection}{0pt}{3pt}{1pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\large FORMULARIO DE SUPERVIVENCIA: CC1002 -- CONTROL 1} \\
+    \footnotesize Felipe Colli Olea -- FCFM Universidad de Chile
+\end{center}
+
+\section{1. La Receta de Diseño (Puntaje Seguro)}
+\textbf{Obligatorio en CADA función para no perder hasta 1.5 pts:}
+\begin{verbatim}
+# nombreFuncion: tipo1 tipo2 -> tipoRetorno
+# Proposito: Breve descripcion de que calcula
+# Ejemplo: nombreFuncion(arg1, arg2) devuelve resultado
+def nombreFuncion(param1, param2):
+    # Cuerpo de la funcion
+    return resultado
+
+# Tests (Al menos 1 o 2 por funcion):
+assert nombreFuncion(val1, val2) == esperado
+assert not funcionBooleana(casoFalso)
+assert cerca(funcionReal(val), esperado, 0.0001)
+\end{verbatim}
+\textbf{Tipos para contratos:} \texttt{int}, \texttt{float}, \texttt{num} (ambos), \texttt{str}, \texttt{bool}, \texttt{None} (procedimientos).
+
+\section{2. Manipulación de Dígitos (Machete Clave)}
+\textbf{Dado un número entero positivo $N$:}
+\begin{itemize}
+    \item \textbf{Último dígito (derecha):} \texttt{n \% 10}
+    \item \textbf{Quitar último dígito:} \texttt{n // 10}
+    \item \textbf{Último par de dígitos (base 100):} \texttt{n \% 100}
+    \item \textbf{Quitar último par de dígitos:} \texttt{n // 100}
+    \item \textbf{Dígito en posición $k$ (desde der=0):} \texttt{(n // (10**k)) \% 10}
+    \item \textbf{Primeros 2 dígitos (izq):} \texttt{n // (10 ** (digitos(n) - 2))}
+    \item \textbf{Quitar primeros 2 dígitos (izq):} \texttt{n \% (10 ** (digitos(n) - 2))}
+    \item \textbf{Quitar ambos extremos (2 dígitos c/u):} \\
+    \texttt{nuevo = (n \% (10**(largo - 2))) // 100}
+\end{itemize}
+
+\section{3. Plantillas de Recursión Clásicas}
+
+\subsection{Contar Dígitos / Largo}
+\begin{verbatim}
+# digitos: int -> int
+def digitos(n):
+    if n < 10:
+        return 1
+    return 1 + digitos(n // 10)
+\end{verbatim}
+
+\subsection{Suma de Dígitos}
+\begin{verbatim}
+# sumaDigitos: int -> int
+def sumaDigitos(n):
+    if n < 10:
+        return n
+    return (n % 10) + sumaDigitos(n // 10)
+\end{verbatim}
+
+\subsection{Invertir un Número}
+\begin{verbatim}
+# invertir: int -> int
+def invertir(n):
+    if n < 10:
+        return n
+    k = digitos(n // 10)
+    return (n % 10) * (10 ** k) + invertir(n // 10)
+\end{verbatim}
+
+\subsection{Mayor Dígito de un Número}
+\begin{verbatim}
+# maxDigito: int -> int
+def maxDigito(n):
+    if n < 10:
+        return n
+    resto = maxDigito(n // 10)
+    u = n % 10
+    return u if u > resto else resto
+\end{verbatim}
+
+\subsection{Procesar Secuencia por Bloques de 2 Dígitos}
+\begin{verbatim}
+# sumarPares: int -> int
+def sumarPares(secuencia):
+    if secuencia == 0:
+        return 0
+    return (secuencia % 100) + sumarPares(secuencia // 100)
+\end{verbatim}
+
+\subsection{Procedimiento Recursivo (Imprimir sin retornar)}
+\begin{verbatim}
+# mostrarPares: int -> None
+def mostrarPares(n):
+    if n > 0:
+        print("Valor:", n % 100)
+        mostrarPares(n // 100)
+\end{verbatim}
+
+\subsection{Comprobar Simetría de Extremos (Estilo Sumeru)}
+\begin{verbatim}
+# comprobar: int -> bool
+def comprobar(N):
+    largo = digitos(N)
+    if largo == 4:
+        return True
+    # Extraer extremos
+    der = N % 100
+    izq = N // (10 ** (largo - 2))
+    # Reducir número eliminando ambos extremos
+    nuevoN = (N % (10 ** (largo - 2))) // 100
+    if (izq + der) != sumarExtremos(nuevoN):
+        return False
+    return comprobar(nuevoN)
+\end{verbatim}
+
+\subsection{Función Wrapper con Acumulador (Recursión de Cola)}
+\begin{verbatim}
+# helper: int int -> int
+def helper(n, acc):
+    if n == 0:
+        return acc
+    return helper(n // 10, acc + (n % 10))
+
+# funcionPrincipal: int -> int
+def funcionPrincipal(n):
+    return helper(n, 0)
+\end{verbatim}
+
+\section{4. Comparación de Flotantes (Cerca)}
+\textbf{¡Nunca usar \texttt{==} para números reales (IEEE 754)!}
+\begin{verbatim}
+# cerca: num num num -> bool
+def cerca(x, y, eps=0.0001):
+    return abs(x - y) < eps
+
+assert cerca(0.1 + 0.2, 0.3)
+\end{verbatim}
+
+\section{5. Módulos y Entradas/Salidas}
+\subsection{Módulo Math y Random}
+\begin{verbatim}
+import math, random
+math.sqrt(x)    # Raiz cuadrada
+math.pi         # Constante pi
+round(num, n)   # Redondea a n decimales
+random.randint(a, b)  # Entero aleatorio en [a, b]
+random.random()       # Float aleatorio en [0.0, 1.0)
+\end{verbatim}
+
+\subsection{Interacción Básica}
+\begin{verbatim}
+x = int(input("Ingrese entero: "))
+y = float(input("Ingrese real: "))
+# Concatenacion limpia sin errores de tipo:
+print("Resultado: " + str(x) + " y " + str(y))
+\end{verbatim}
+
+\section{6. Trucos y Errores Típicos a Evitar}
+\begin{itemize}
+    \item \textbf{NOTA DEL ENUNCIADO:} En casi todos los controles prohíben explícitamente usar \texttt{str()} para procesar números en las preguntas de recursión. \textbf{Usa solo \texttt{\% 10}, \texttt{// 10} y potencias de 10}.
+    \item \textbf{Condicionales directos:} En vez de \texttt{if x \% 2 == 0: return True else: return False}, escribe directo: \texttt{return (x \% 2 == 0)}.
+    \item \textbf{Importar módulos de la pregunta:} Si el enunciado dice que existe un módulo \texttt{domino} o \texttt{musical}, no olvides escribir al inicio: \\
+    \texttt{from domino import *}
+    \item \textbf{Pre-condición con assert:} Si te piden que $x > 0$, mete un \texttt{assert x > 0} dentro del cuerpo antes de la lógica.
+\end{itemize}
+
+\end{document}
