@@ -1,181 +1,222 @@
 \documentclass[8pt,twocolumn]{article}
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.35in]{geometry}
+\usepackage[letterpaper,margin=0.25in]{geometry}
 \usepackage{amsmath,amssymb}
 \usepackage{titlesec}
 
-\titleformat{\section}{\small\bfseries\uppercase}{}{0em}{}[\titlerule]
-\titleformat{\subsection}{\footnotesize\bfseries}{}{0em}{}
-\titlespacing*{\section}{0pt}{4pt}{2pt}
-\titlespacing*{\subsection}{0pt}{3pt}{1pt}
+\titleformat{\section}{\scriptsize\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\tiny\bfseries}{}{0em}{}
+\titlespacing*{\section}{0pt}{2pt}{1pt}
+\titlespacing*{\subsection}{0pt}{1pt}{0pt}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{2pt}
+\setlength{\parskip}{1pt}
 \pagestyle{empty}
 
 \begin{document}
 
 \begin{center}
-    \textbf{\large FORMULARIO DE SUPERVIVENCIA: CC1002 -- CONTROL 1} \\
-    \footnotesize Felipe Colli Olea -- FCFM Universidad de Chile
+    \textbf{\normalsize FORMULARIO DE COMBATE: CC1002 -- CONTROL 1} \\
+    \tiny Felipe Colli Olea -- FCFM Universidad de Chile -- Primavera 2026
 \end{center}
 
-\section{1. La Receta de Diseño (Puntaje Seguro)}
-\textbf{Obligatorio en CADA función para no perder hasta 1.5 pts:}
+\section{1. La Sagrada Receta de Diseño (Puntaje Fijo)}
+\textbf{Obligatorio en CADA función (hasta 1.5 pts por pregunta):}
 \begin{verbatim}
 # nombreFuncion: tipo1 tipo2 -> tipoRetorno
 # Proposito: Breve descripcion de que calcula
 # Ejemplo: nombreFuncion(arg1, arg2) devuelve resultado
 def nombreFuncion(param1, param2):
-    # Cuerpo de la funcion
     return resultado
 
-# Tests (Al menos 1 o 2 por funcion):
+# Tests (Minimo 1 o 2 por funcion):
 assert nombreFuncion(val1, val2) == esperado
 assert not funcionBooleana(casoFalso)
 assert cerca(funcionReal(val), esperado, 0.0001)
 \end{verbatim}
-\textbf{Tipos para contratos:} \texttt{int}, \texttt{float}, \texttt{num} (ambos), \texttt{str}, \texttt{bool}, \texttt{None} (procedimientos).
+\textbf{Contratos válidos:} \texttt{int}, \texttt{float}, \texttt{num} (ambos), \texttt{str}, \texttt{bool}, \texttt{None} (procedimientos).
 
-\section{2. Manipulación de Dígitos (Machete Clave)}
-\textbf{Dado un número entero positivo $N$:}
+\section{2. Manipulación de Dígitos (Sin usar str())}
+\textbf{Dado $N \ge 0$ (REGLA: NUNCA usar str(N) si lo prohíben):}
 \begin{itemize}
-    \item \textbf{Último dígito (derecha):} \texttt{n \% 10}
-    \item \textbf{Quitar último dígito:} \texttt{n // 10}
-    \item \textbf{Último par de dígitos (base 100):} \texttt{n \% 100}
-    \item \textbf{Quitar último par de dígitos:} \texttt{n // 100}
-    \item \textbf{Dígito en posición $k$ (desde der=0):} \texttt{(n // (10**k)) \% 10}
+    \item \textbf{Último dígito (der):} \texttt{n \% 10} \quad \textbf{Quitar der:} \texttt{n // 10}
+    \item \textbf{Último par (base 100):} \texttt{n \% 100} \quad \textbf{Quitar par:} \texttt{n // 100}
     \item \textbf{Primeros 2 dígitos (izq):} \texttt{n // (10 ** (digitos(n) - 2))}
-    \item \textbf{Quitar primeros 2 dígitos (izq):} \texttt{n \% (10 ** (digitos(n) - 2))}
+    \item \textbf{Quitar primeros 2 dígitos:} \texttt{n \% (10 ** (digitos(n) - 2))}
     \item \textbf{Quitar ambos extremos (2 dígitos c/u):} \\
     \texttt{nuevo = (n \% (10**(largo - 2))) // 100}
+    \item \textbf{Pegar número a la izquierda:} \texttt{izq * (10**digitos(der)) + der}
+    \item \textbf{Pegar número a la derecha:} \texttt{juego * 100 + nuevaFicha}
 \end{itemize}
 
-\section{3. Plantillas de Recursión Clásicas}
-
-\subsection{Contar Dígitos / Largo}
+\section{3. Primos y Divisores (Clase 8)}
+\subsection{Verificar si un número es Primo ($O(\sqrt{n})$)}
 \begin{verbatim}
-# digitos: int -> int
-def digitos(n):
-    if n < 10:
-        return 1
-    return 1 + digitos(n // 10)
+# esPrimo: int -> bool
+def esPrimo(n):
+    if n == 2: return True
+    elif n % 2 == 0 or n < 2: return False
+    return esPrimoRec(n, 3)
+
+# esPrimoRec: int int -> bool
+def esPrimoRec(n, div=3):
+    if div ** 2 > n: return True
+    elif n % div == 0: return False
+    else: return esPrimoRec(n, div + 2)
 \end{verbatim}
 
-\subsection{Suma de Dígitos}
+\subsection{Generar String con los primeros $n$ Primos}
 \begin{verbatim}
-# sumaDigitos: int -> int
-def sumaDigitos(n):
-    if n < 10:
-        return n
-    return (n % 10) + sumaDigitos(n // 10)
+# nPrimos: int -> str
+def nPrimos(n):
+    if n == 0: return ''
+    elif n == 1: return '2'
+    else: return '2' + nPrimosRec(n - 1, 3)
+
+# nPrimosRec: int int -> str
+def nPrimosRec(n, valor):
+    if n == 0: return ''
+    elif esPrimo(valor):
+        return ' ' + str(valor) + nPrimosRec(n - 1, valor + 2)
+    else: return nPrimosRec(n, valor + 2)
 \end{verbatim}
 
-\subsection{Invertir un Número}
+\subsection{Factores Primos de un Número}
 \begin{verbatim}
-# invertir: int -> int
-def invertir(n):
-    if n < 10:
-        return n
-    k = digitos(n // 10)
-    return (n % 10) * (10 ** k) + invertir(n // 10)
+# menorDivisor: int int -> int
+def menorDivisor(n, div):
+    if n % div == 0: return div
+    return menorDivisor(n, div + 1)
+
+# factoresPrimos: int -> str
+def factoresPrimos(n):
+    if esPrimo(n): return str(n)
+    else:
+        div = menorDivisor(n, 2)
+        return str(div) + ' ' + str(factoresPrimos(n // div))
 \end{verbatim}
 
-\subsection{Mayor Dígito de un Número}
-\begin{verbatim}
-# maxDigito: int -> int
-def maxDigito(n):
-    if n < 10:
-        return n
-    resto = maxDigito(n // 10)
-    u = n % 10
-    return u if u > resto else resto
-\end{verbatim}
-
-\subsection{Procesar Secuencia por Bloques de 2 Dígitos}
-\begin{verbatim}
-# sumarPares: int -> int
-def sumarPares(secuencia):
-    if secuencia == 0:
-        return 0
-    return (secuencia % 100) + sumarPares(secuencia // 100)
-\end{verbatim}
-
-\subsection{Procedimiento Recursivo (Imprimir sin retornar)}
-\begin{verbatim}
-# mostrarPares: int -> None
-def mostrarPares(n):
-    if n > 0:
-        print("Valor:", n % 100)
-        mostrarPares(n // 100)
-\end{verbatim}
-
-\subsection{Comprobar Simetría de Extremos (Estilo Sumeru)}
-\begin{verbatim}
-# comprobar: int -> bool
-def comprobar(N):
-    largo = digitos(N)
-    if largo == 4:
-        return True
-    # Extraer extremos
-    der = N % 100
-    izq = N // (10 ** (largo - 2))
-    # Reducir número eliminando ambos extremos
-    nuevoN = (N % (10 ** (largo - 2))) // 100
-    if (izq + der) != sumarExtremos(nuevoN):
-        return False
-    return comprobar(nuevoN)
-\end{verbatim}
-
-\subsection{Función Wrapper con Acumulador (Recursión de Cola)}
-\begin{verbatim}
-# helper: int int -> int
-def helper(n, acc):
-    if n == 0:
-        return acc
-    return helper(n // 10, acc + (n % 10))
-
-# funcionPrincipal: int -> int
-def funcionPrincipal(n):
-    return helper(n, 0)
-\end{verbatim}
-
-\section{4. Comparación de Flotantes (Cerca)}
-\textbf{¡Nunca usar \texttt{==} para números reales (IEEE 754)!}
+\section{4. Raíz Cuadrada: Método de Herón (Clase 7)}
 \begin{verbatim}
 # cerca: num num num -> bool
 def cerca(x, y, eps=0.0001):
     return abs(x - y) < eps
 
-assert cerca(0.1 + 0.2, 0.3)
+# heronRec: num num num -> num
+def heronRec(x, eps, est):
+    assert x > 0
+    if cerca(est * est, x, eps): return est
+    else:
+        mejor = (est + (x / est)) / 2.0
+        return heronRec(x, eps, mejor)
+
+# heron: num num -> num
+def heron(x, eps):
+    return heronRec(x, eps, x / 2.0)
 \end{verbatim}
 
-\section{5. Módulos y Entradas/Salidas}
-\subsection{Módulo Math y Random}
+\section{5. Torres de Hanoi (Recursión con Strings)}
 \begin{verbatim}
-import math, random
-math.sqrt(x)    # Raiz cuadrada
-math.pi         # Constante pi
-round(num, n)   # Redondea a n decimales
-random.randint(a, b)  # Entero aleatorio en [a, b]
-random.random()       # Float aleatorio en [0.0, 1.0)
+# hanoiRec: int str str str -> str
+def hanoiRec(n, partida, medio, final):
+    if n == 0: return ''
+    t1 = hanoiRec(n - 1, partida, final, medio)
+    t2 = str(partida) + ' --> ' + str(final) + '\n'
+    t3 = hanoiRec(n - 1, medio, partida, final)
+    return t1 + t2 + t3
 \end{verbatim}
 
-\subsection{Interacción Básica}
+\section{6. Gráficos y Fractales con Turtle (Clase 6)}
+\textbf{Primitivas Turtle:}
 \begin{verbatim}
-x = int(input("Ingrese entero: "))
-y = float(input("Ingrese real: "))
-# Concatenacion limpia sin errores de tipo:
-print("Resultado: " + str(x) + " y " + str(y))
+import turtle
+turtle.forward(dist)   # Avanza
+turtle.backward(dist)  # Retrocede
+turtle.left(angulo)    # Gira izq en grados
+turtle.right(angulo)   # Gira der en grados
+turtle.penup()         # Levanta lapiz (no dibuja)
+turtle.pendown()       # Baja lapiz (dibuja)
+turtle.speed(0)        # Maxima velocidad
+turtle.hideturtle()    # Oculta icono tortuga
+turtle.done()          # Finaliza dibujo
 \end{verbatim}
 
-\section{6. Trucos y Errores Típicos a Evitar}
+\subsection{Triángulo de Sierpinski}
+\begin{verbatim}
+def triangulo(largo):
+    turtle.forward(largo); turtle.left(120)
+    turtle.forward(largo); turtle.left(120)
+    turtle.forward(largo); turtle.left(120)
+
+def sierpinski(largo):
+    if largo > 4:
+        triangulo(largo)
+        sierpinski(largo // 2)
+        turtle.forward(largo // 2)
+        sierpinski(largo // 2)
+        turtle.backward(largo // 2); turtle.left(60)
+        turtle.forward(largo // 2); turtle.right(60)
+        sierpinski(largo // 2)
+        turtle.left(60); turtle.backward(largo // 2); turtle.right(60)
+\end{verbatim}
+
+\subsection{Copo de Nieve de Koch}
+\begin{verbatim}
+def koch(size, min_size):
+    if size / 3 < min_size:
+        turtle.forward(size)
+    else:
+        koch(size / 3, min_size); turtle.left(60)
+        koch(size / 3, min_size); turtle.right(120)
+        koch(size / 3, min_size); turtle.left(60)
+        koch(size / 3, min_size)
+\end{verbatim}
+
+\section{7. Plantillas Recursivas Fundamentales}
+\subsection{Contar Dígitos / Invertir / Mayor Dígito}
+\begin{verbatim}
+def digitos(n):
+    if n < 10: return 1
+    return 1 + digitos(n // 10)
+
+def invertir(n):
+    if n < 10: return n
+    return (n % 10)*(10**digitos(n // 10)) + invertir(n // 10)
+
+def maxDigito(n):
+    if n < 10: return n
+    r = maxDigito(n // 10); u = n % 10
+    return u if u > r else r
+\end{verbatim}
+
+\subsection{Procedimiento Recursivo (Mostrar / Imprimir)}
+\begin{verbatim}
+def mostrar(n):
+    if n > 0:
+        print("Dato:", n % 100)
+        mostrar(n // 100)
+\end{verbatim}
+
+\section{8. Operadores, Módulos y Trucos Clave}
 \begin{itemize}
-    \item \textbf{NOTA DEL ENUNCIADO:} En casi todos los controles prohíben explícitamente usar \texttt{str()} para procesar números en las preguntas de recursión. \textbf{Usa solo \texttt{\% 10}, \texttt{// 10} y potencias de 10}.
-    \item \textbf{Condicionales directos:} En vez de \texttt{if x \% 2 == 0: return True else: return False}, escribe directo: \texttt{return (x \% 2 == 0)}.
-    \item \textbf{Importar módulos de la pregunta:} Si el enunciado dice que existe un módulo \texttt{domino} o \texttt{musical}, no olvides escribir al inicio: \\
-    \texttt{from domino import *}
-    \item \textbf{Pre-condición con assert:} Si te piden que $x > 0$, mete un \texttt{assert x > 0} dentro del cuerpo antes de la lógica.
+    \item \textbf{Precedencia Operadores:} \texttt{**} $>$ \texttt{*}, \texttt{/}, \texttt{//}, \texttt{\%} $>$ \texttt{+}, \texttt{-} $>$ Relacionales (\texttt{<, >, ==, !=}) $>$ \texttt{not} $>$ \texttt{and} $>$ \texttt{or}.
+    \item \textbf{División Entera vs Real:} \texttt{7 / 2 -> 3.5} (float), \texttt{7 // 2 -> 3} (int), \texttt{7 \% 2 -> 1}.
+    \item \textbf{Módulo Math y Random:}
+    \begin{verbatim}
+import math, random
+math.sqrt(x)  | math.pi | round(num, 1)
+random.randint(a, b) # Entero en [a, b] inclusivo
+random.random()      # Real en [0.0, 1.0)
+    \end{verbatim}
+    \item \textbf{Redondeo:} \texttt{round(3.956, 1) -> 4.0}, \texttt{round(2/3, 2) -> 0.67}.
+    \item \textbf{Input y Conversión limpia:}
+    \begin{verbatim}
+val = int(input("Ingrese n: "))
+txt = input("Nombre? ")
+print("Resultado: " + str(val) + " " + txt)
+    \end{verbatim}
+    \item \textbf{Retorno Booleano Directo:} Escribe siempre \texttt{return (x \% 2 == 0)} en vez de \texttt{if... return True else return False}.
+    \item \textbf{Importar módulos de la pregunta:} Si el problema menciona un módulo ficticio (ej. \texttt{domino} o \texttt{musical}), escribe: \texttt{from domino import *} arriba.
 \end{itemize}
 
 \end{document}
