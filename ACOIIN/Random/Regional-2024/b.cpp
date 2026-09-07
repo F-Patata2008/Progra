@@ -8,12 +8,14 @@ typedef string str;
 int main() {
     ll n, m;
     cin >> n >> m;
-    
-    ll sol;
-    sol = (n*m)/2;
 
-    if (n * m % 2 == 0) cout << sol << " " << sol << endl;
-    else cout << sol + 1 << " " << sol << endl;
+    ll sol;
+    sol = (n * m) / 2;
+
+    if (n * m % 2 == 0)
+        cout << sol << " " << sol << endl;
+    else
+        cout << sol + 1 << " " << sol << endl;
 
     return 0;
 }
