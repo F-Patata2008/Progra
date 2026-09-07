@@ -1,26 +1,26 @@
 import moduloTarea1
 
-# int int -> void
-# recibe una secuencia, la separa en segmentos de tmaño n, y los imprime
-# ejemplo (3938363534313125191814) devuelve: 
-# 14, 18, 19, 25, 31
-# 31, 34, 35, 36, 38
-# 39
+# ==============================================================================
+# PROCEDIMIENTO AUXILIAR
+# ==============================================================================
 
+# imprimir : int int -> None
+# Imprime en pantalla los valores de una secuencia separados por segmentos de tamano n
+# ejemplo: imprimir(1814, 1) imprime:
+# 14
+# 18
 def imprimir(secuencia, n):
-    # Caso base: si ya no queda secuencia, salimos de la recursión
     if secuencia <= 0:
         return
-        
     primer_seg = moduloTarea1.primerSegmento(secuencia, n)
     resto = moduloTarea1.restoSegmentos(secuencia, n)
-    
-    # Imprimimos el string del segmento actual
-    print(moduloTarea1.textoSegmento(primer_seg)) 
-    
-    # Llamada recursiva para el resto (sin return porque es un procedimiento)
+    print(moduloTarea1.textoSegmento(primer_seg))
     imprimir(resto, n)
 
+
+# ==============================================================================
+# PROGRAMA INTERACTIVO PRINCIPAL
+# ==============================================================================
 
 secuencia = int(input("Secuencia? "))
 n = int(input("n? "))
@@ -32,6 +32,5 @@ if suavizada == -1:
 else:
     print("Valores originales:")
     imprimir(secuencia, n)
-    
     print("Valores despues de proceso de suavizado:")
     imprimir(suavizada, n)
