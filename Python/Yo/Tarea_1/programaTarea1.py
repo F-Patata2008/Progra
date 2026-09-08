@@ -1,8 +1,5 @@
 import moduloTarea1
 
-# ==============================================================================
-# PROCEDIMIENTO AUXILIAR
-# ==============================================================================
 
 # imprimir : int int -> None
 # Imprime en pantalla los valores de una secuencia separados por segmentos de tamano n
@@ -17,10 +14,6 @@ def imprimir(secuencia, n):
     print(moduloTarea1.textoSegmento(primer_seg))
     imprimir(resto, n)
 
-
-# ==============================================================================
-# PROGRAMA INTERACTIVO PRINCIPAL
-# ==============================================================================
 
 secuencia = int(input("Secuencia? "))
 n = int(input("n? "))

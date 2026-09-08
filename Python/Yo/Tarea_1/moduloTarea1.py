@@ -1,16 +1,9 @@
-# ==============================================================================
-# CC1002 - Tarea 1: Modulo de funciones para suavizado de secuencias
-# ==============================================================================
-
-# ==============================================================================
-# FUNCIONES PRINCIPALES SOLICITADAS (PARTE 1)
-# ==============================================================================
-
 # primerSegmento : int int -> int
 # Recibe una secuencia y tamano de segmento validos, y devuelve el primer segmento
 # ejemplo: primerSegmento(25191814, 2) devuelve 1814
 def primerSegmento(secuencia, n):
-    return secuencia % (100 ** n)
+    return secuencia % (100**n)
+
 
 # Tests
 assert primerSegmento(25191814, 2) == 1814
@@ -23,7 +16,8 @@ assert primerSegmento(30, 2) == 30
 # Recibe una secuencia y tamano de segmento validos, y devuelve la secuencia sin el primer segmento
 # ejemplo: restoSegmentos(25191814, 2) devuelve 2519
 def restoSegmentos(secuencia, n):
-    return secuencia // (100 ** n)
+    return secuencia // (100**n)
+
 
 # Tests
 assert restoSegmentos(25191814, 2) == 2519
@@ -40,6 +34,7 @@ def contar(secuencia):
         return 0
     return 1 + contar(secuencia // 100)
 
+
 # Tests
 assert contar(25191814) == 4
 assert contar(1210) == 2
@@ -53,7 +48,10 @@ assert contar(0) == 0
 def estaOrdenada(secuencia):
     if secuencia < 100:
         return True
-    return (secuencia % 100 <= (secuencia // 100) % 100) and estaOrdenada(secuencia // 100)
+    return (secuencia % 100 <= (secuencia // 100) % 100) and estaOrdenada(
+        secuencia // 100
+    )
+
 
 # Tests
 assert estaOrdenada(25191814) == True
@@ -72,6 +70,7 @@ def textoSegmento(segmento):
         return str(segmento)
     return str(segmento % 100) + ", " + textoSegmento(segmento // 100)
 
+
 # Tests
 assert textoSegmento(1814) == "14, 18"
 assert textoSegmento(363534) == "34, 35, 36"
@@ -83,6 +82,7 @@ assert textoSegmento(2222) == "22, 22"
 # FUNCIONES AUXILIARES (DESCOMPOSICION FUNCIONAL)
 # ==============================================================================
 
+
 # valoresValidos : int -> bool
 # Verifica si todos los valores de una secuencia son enteros de 2 digitos en [10, 99]
 # ejemplo: valoresValidos(2519) devuelve True
@@ -92,6 +92,7 @@ def valoresValidos(secuencia):
     if secuencia % 100 < 10:
         return False
     return valoresValidos(secuencia // 100)
+
 
 # Tests
 assert valoresValidos(2519) == True
@@ -110,6 +111,7 @@ def secuenciaValida(secuencia):
         return True
     return valoresValidos(secuencia) and estaOrdenada(secuencia)
 
+
 # Tests
 assert secuenciaValida(25191814) == True
 assert secuenciaValida(0) == True
@@ -125,6 +127,7 @@ def sumarSegmento(segmento):
         return 0
     return (segmento % 100) + sumarSegmento(segmento // 100)
 
+
 # Tests
 assert sumarSegmento(1814) == 32
 assert sumarSegmento(2519) == 44
@@ -139,6 +142,7 @@ def repetirValor(valor, k):
     if k == 0:
         return 0
     return valor + (repetirValor(valor, k - 1) * 100)
+
 
 # Tests
 assert repetirValor(19, 4) == 19191919
@@ -157,6 +161,7 @@ def suavizarSegmento(segmento):
     promedio = sumarSegmento(segmento) // largo
     return repetirValor(promedio, largo)
 
+
 # Tests
 assert suavizarSegmento(25191814) == 19191919
 assert suavizarSegmento(35343131) == 32323232
@@ -174,7 +179,8 @@ def suavizarSecuencia(secuencia, n):
     resto = restoSegmentos(secuencia, n)
     seg_suavizado = suavizarSegmento(primer_seg)
     largo_seg = contar(primer_seg)
-    return seg_suavizado + (suavizarSecuencia(resto, n) * (100 ** largo_seg))
+    return seg_suavizado + (suavizarSecuencia(resto, n) * (100**largo_seg))
+
 
 # Tests
 assert suavizarSecuencia(25191814, 2) == 22221616
@@ -187,6 +193,7 @@ assert suavizarSecuencia(0, 4) == 0
 # FUNCIONES PRINCIPALES SOLICITADAS (PARTE 2)
 # ==============================================================================
 
+
 # proceso : int int -> int
 # Recibe secuencia y tamano de segmento. Devuelve -1 si hay datos invalidos, o la secuencia suavizada
 # ejemplo: proceso(25191814, 2) devuelve 22221616
@@ -194,6 +201,7 @@ def proceso(secuencia, n):
     if n < 1 or not secuenciaValida(secuencia):
         return -1
     return suavizarSecuencia(secuencia, n)
+
 
 # Tests
 assert proceso(3938363534313125191814, 4) == 3737373232323219191919
