@@ -1,15 +1,45 @@
+# Logs
 push.log
-# Binarios comunes
+
+# Binarios y ejecutables
 *.o
 *.out
 *.exe
 *.bin
-
-# Tu binario especifico de testing
 tester
 teste
 out
+salida
 
-# Archivos de sistema
+# Crash dumps y archivos core
+vgcore.*
+core.*
+core
+
+# Python cache y entornos
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+
+# LaTeX archivos auxiliares
+*.aux
+*.fls
+*.fdb_latexmk
+*.log
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+*.bbl
+*.blg
+
+# Archivos de sistema y editores
 .DS_Store
 thumbs.db
+desktop.ini
+*.swp
+*~
