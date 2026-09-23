@@ -1,3 +1,1 @@
-{
-  "reportUndefinedVariable": "none"
-}
+{ "executionEnvironments": [ { "root": ".", "extraPaths": ["."] } ], "reportAttributeAccessIssue": "none", "reportMissingImports": "none" }
