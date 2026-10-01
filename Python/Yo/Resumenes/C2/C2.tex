@@ -1,0 +1,283 @@
+\documentclass[8pt,twocolumn]{extarticle}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[letterpaper,margin=0.25in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{titlesec}
+
+\titleformat{\section}{\scriptsize\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\tiny\bfseries}{}{0em}{}
+\titlespacing*{\section}{0pt}{2pt}{1pt}
+\titlespacing*{\subsection}{0pt}{1pt}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\normalsize FORMULARIO DE COMBATE: CC1002 -- CONTROL 2} \\
+    \tiny Felipe Colli Olea -- FCFM Universidad de Chile -- Primavera 2026
+\end{center}
+
+\section{1. La Sagrada Receta de Diseño (Puntaje Fijo)}
+\textbf{Obligatorio en CADA función (hasta 1.5 - 2.0 pts por pregunta):}
+\begin{verbatim}
+# nombreFuncion: tipo1 tipo2 -> tipoRetorno
+# Proposito: Breve descripcion de que calcula
+# Ejemplo: nombreFuncion(arg1, arg2) devuelve resultado
+def nombreFuncion(param1, param2):
+    return resultado
+
+# Tests (Al menos 1 o 2 tests por funcion):
+assert nombreFuncion(val1, val2) == esperado
+assert not funcionBooleana(casoFalso)
+\end{verbatim}
+\textbf{Contratos válidos en C2:}
+\begin{itemize}
+    \item \textbf{Estructuras y listas:} \texttt{lista(int)}, \texttt{lista(str)}, \texttt{lista(any)}, \texttt{lista(Carta)}, \texttt{AB}, \texttt{ABB}, \texttt{nodoAG}.
+    \item \textbf{Funciones de orden superior:} \texttt{(any -> bool)}, \texttt{(any -> any)}, \texttt{(any any -> any)}.
+    \item \textbf{Básicos:} \texttt{int}, \texttt{float}, \texttt{num}, \texttt{str}, \texttt{bool}, \texttt{None} (procedimientos).
+\end{itemize}
+
+\section{2. Datos Compuestos (\texttt{import estructura})}
+\textbf{Definición e Instanciación (INMUTABLES):}
+\begin{verbatim}
+import estructura
+# Registro: campo1(tipo1) campo2(tipo2)
+estructura.crear('Registro', 'campo1 campo2')
+r = Registro(val1, val2)
+# Acceso a campos:
+x = r.campo1; y = r.campo2
+\end{verbatim}
+\textbf{REGLA DE ORO:} Los structs creados con \texttt{estructura.crear} \textbf{NO SON MUTABLES} (\texttt{r.campo1 = x} lanza \texttt{AttributeError}). Para ``modificar'', se retorna una nueva instancia: \texttt{Registro(nuevo, r.campo2)}.
+
+\section{3. Listas Recursivas No Mutables (\texttt{lista.py})}
+\textbf{Primitivas Fundamentales (\texttt{from lista import *}):}
+\begin{itemize}
+    \item \texttt{listaVacia = None} (Identificador para lista vacía).
+    \item \texttt{lista(valor, resto)} o \texttt{crearLista(valor, resto)}: Crea nodo.
+    \item \texttt{cabeza(L)}: Retorna valor en la cabeza (\texttt{L.valor}).
+    \item \texttt{cola(L)}: Retorna resto de la lista (\texttt{L.siguiente}).
+    \item \texttt{vacia(L)}: Retorna \texttt{True} si \texttt{L == listaVacia}.
+\end{itemize}
+
+\subsection{Plantillas Estándar de Listas}
+\textbf{1. Largo / Conteo:}
+\begin{verbatim}
+def largo(L):
+    if vacia(L): return 0
+    return 1 + largo(cola(L))
+\end{verbatim}
+\textbf{2. Búsqueda de elemento (retorna dato o None):}
+\begin{verbatim}
+def buscar(L, clave):
+    if vacia(L): return None
+    if cabeza(L).id == clave: return cabeza(L)
+    return buscar(cola(L), clave)
+\end{verbatim}
+\textbf{3. Unión de dos listas (preserva orden):}
+\begin{verbatim}
+def unionListas(L1, L2):
+    if vacia(L1): return L2
+    return lista(cabeza(L1), unionListas(cola(L1), L2))
+\end{verbatim}
+\textbf{4. Invertir lista:}
+\begin{verbatim}
+def invertir(L, acc=listaVacia):
+    if vacia(L): return acc
+    return invertir(cola(L), lista(cabeza(L), acc))
+\end{verbatim}
+\textbf{5. Procesamiento de a Pares / Consecutivos (C2 2025):}
+\begin{verbatim}
+def pares(L):
+    if vacia(L) or vacia(cola(L)): return listaVacia
+    c_act = cabeza(L); c_sig = cabeza(cola(L))
+    if c_act.valor == c_sig.valor:
+        resto = pares(cola(cola(L)))
+        return lista(c_act, lista(c_sig, resto))
+    return pares(cola(L))
+\end{verbatim}
+
+\section{4. Árboles Binarios (AB)}
+\textbf{Definición e Identificador Vacío:}
+\begin{verbatim}
+# AB: valor(any) izq(AB) der(AB)
+estructura.crear('AB', 'valor izq der')
+ABVacio = None
+# vacio(A): A == ABVacio (o A == None)
+\end{verbatim}
+\textbf{Condición de Hoja:} \texttt{A.izq == None and A.der == None}.
+
+\subsection{Operaciones Clave en AB}
+\textbf{1. Contar Nodos:}
+\begin{verbatim}
+def contar(A):
+    if A == None: return 0
+    return 1 + contar(A.izq) + contar(A.der)
+\end{verbatim}
+\textbf{2. Contar Hojas:}
+\begin{verbatim}
+def hojas(A):
+    if A == None: return 0
+    if A.izq == None and A.der == None: return 1
+    return hojas(A.izq) + hojas(A.der)
+\end{verbatim}
+\textbf{3. Altura de un Árbol:}
+\begin{verbatim}
+def altura(A):
+    if A == None: return 0
+    return 1 + max(altura(A.izq), altura(A.der))
+\end{verbatim}
+\textbf{4. Recorridos a Lista:}
+\begin{itemize}
+    \item \textbf{Preorden (R-I-D):} \texttt{lista(A.valor, unionListas(pre(A.izq), pre(A.der)))}
+    \item \textbf{Inorden (I-R-D):} \texttt{unionListas(inord(A.izq), lista(A.valor, inord(A.der)))}
+    \item \textbf{Postorden (I-D-R):} \texttt{unionListas(post(A.izq), unionListas(post(A.der), lista(A.valor, listaVacia)))}
+\end{itemize}
+\textbf{5. Árboles de Torneo / Relación Padre-Hijo (C2 2024):}
+\begin{verbatim}
+def validarTorneo(A):
+    if A == None: return False
+    if A.izq == None and A.der == None: return True
+    ambos_ok = validarTorneo(A.izq) and validarTorneo(A.der)
+    gana_uno = (A.valor == A.izq.valor or A.valor == A.der.valor)
+    return ambos_ok and gana_uno
+\end{verbatim}
+
+\section{5. Árboles Binarios de Búsqueda (ABB)}
+\textbf{Propiedad ABB:} $\forall$ nodo $X$: Subárbol Izq $< X <$ Subárbol Der.
+\begin{verbatim}
+# 1. Busqueda O(h):
+def buscarABB(A, x):
+    if A == None: return None
+    if A.valor == x: return A
+    elif x < A.valor: return buscarABB(A.izq, x)
+    else: return buscarABB(A.der, x)
+
+# 2. Camino hacia un valor (Lab 7):
+def camino(A, x):
+    if A == None: return None
+    if A.valor == x: return lista(x, None)
+    elif x < A.valor:
+        return lista(A.valor, camino(A.izq, x))
+    else:
+        return lista(A.valor, camino(A.der, x))
+
+# 3. Insercion no mutable en ABB:
+def insertarABB(A, x):
+    if A == None: return AB(x, None, None)
+    if x < A.valor:
+        return AB(A.valor, insertarABB(A.izq, x), A.der)
+    elif x > A.valor:
+        return AB(A.valor, A.izq, insertarABB(A.der, x))
+    return A
+
+# 4. Minimo y Maximo en ABB:
+def minimoABB(A):
+    assert A != None
+    if A.izq == None: return A.valor
+    return minimoABB(A.izq)
+
+def maximoABB(A):
+    assert A != None
+    if A.der == None: return A.valor
+    return maximoABB(A.der)
+
+# 5. Verificar si un AB es ABB valido:
+def esABB(A, mini=-float('inf'), maxi=float('inf')):
+    if A == None: return True
+    if not (mini < A.valor < maxi): return False
+    return esABB(A.izq, mini, A.valor) and \
+           esABB(A.der, A.valor, maxi)
+\end{verbatim}
+
+\section{6. Abstracción Funcional y Orden Superior}
+\subsection{Funciones Anónimas (\texttt{lambda})}
+Sintaxis: \texttt{lambda arg1, arg2, ...: expresion}
+\begin{verbatim}
+lambda x: x + 1                  # Sumar 1
+lambda c: c.pinta == 'C'          # Predicado booleano
+lambda x, y: x + y               # Acumulador binario
+\end{verbatim}
+
+\subsection{Las 3 Funciones Abstractas Sagradas}
+\textbf{1. Mapa (\texttt{mapa}): Transforma cada elemento de la lista:}
+\begin{verbatim}
+# mapa: (X -> Y) lista(X) -> lista(Y)
+def mapa(f, unaLista):
+    if vacia(unaLista): return listaVacia
+    return lista(f(cabeza(unaLista)), mapa(f, cola(unaLista)))
+\end{verbatim}
+\textbf{2. Filtro (\texttt{filtro}): Filtra elementos que cumplen condición:}
+\begin{verbatim}
+# filtro: (X -> bool) lista(X) -> lista(X)
+def filtro(operador, unaLista):
+    if vacia(unaLista): return listaVacia
+    if operador(cabeza(unaLista)):
+        return lista(cabeza(unaLista),
+                     filtro(operador, cola(unaLista)))
+    return filtro(operador, cola(unaLista))
+\end{verbatim}
+\textbf{3. Reductor (\texttt{fold}): Reduce la lista a un único valor acumulado:}
+\begin{verbatim}
+# fold: (Y X -> Y) Y lista(X) -> Y
+def fold(f, init, unaLista):
+    if vacia(unaLista): return init
+    return fold(f, f(init, cabeza(unaLista)), cola(unaLista))
+\end{verbatim}
+\textbf{Equivalencias clásicas con fold:}
+\begin{itemize}
+    \item \texttt{suma = fold(lambda acc, x: acc + x, 0, L)}
+    \item \texttt{prod = fold(lambda acc, x: acc * x, 1, L)}
+    \item \texttt{largo = fold(lambda acc, x: acc + 1, 0, L)}
+    \item \texttt{invertir = fold(lambda acc, x: lista(x, acc), listaVacia, L)}
+\end{itemize}
+
+\subsection{Mapa sobre Árboles Binarios (\texttt{mapaAB} - Lab 6)}
+\begin{verbatim}
+# mapaAB: (X -> Y) AB(X) -> AB(Y)
+def mapaAB(f, unAB):
+    if unAB == None: return None
+    return AB(f(unAB.valor),
+              mapaAB(f, unAB.izq),
+              mapaAB(f, unAB.der))
+\end{verbatim}
+
+\subsection{Patrón Pipeline (Filtro + Mapa Combinados)}
+\begin{verbatim}
+# Ej C2 2024: buscar por ids y filtrar None
+resultado = mapa(lambda id: buscarPersona(LP, id), Lids)
+return filtro(lambda p: p != None, resultado)
+\end{verbatim}
+
+\section{7. Árboles Genealógicos / N-arios}
+\begin{verbatim}
+# nodoAG: padre(nodoAG) madre(nodoAG)
+#         nombre(str) nac(int) ojos(str)
+estructura.crear('nodoAG', 'padre madre nombre nac ojos')
+nodoAGVacio = None
+
+# Buscar si algun ancestro cumple condicion:
+def ancestroOjosAzules(unAG):
+    if unAG == None: return False
+    return (unAG.ojos == 'azules') or \
+           ancestroOjosAzules(unAG.padre) or \
+           ancestroOjosAzules(unAG.madre)
+\end{verbatim}
+
+\section{8. Errores Fatales y Trampas Típicas en C2}
+\begin{itemize}
+    \item \textbf{AttributeError: 'NoneType' object has no attribute 'x':} Ocurre al hacer \texttt{A.izq.valor} o \texttt{cabeza(cola(L))} sin verificar antes si el subárbol o cola es \texttt{None}. ¡SIEMPRE caso base antes!
+    \item \textbf{Inversión en ABB:} En un ABB:
+    \begin{itemize}
+        \item \texttt{val < A.valor} $\rightarrow$ buscar en \textbf{IZQUIERDA} (\texttt{A.izq}).
+        \item \texttt{val > A.valor} $\rightarrow$ buscar en \textbf{DERECHA} (\texttt{A.der}).
+    \end{itemize}
+    \item \textbf{Preservar el Orden en Listas:}
+    \texttt{lista(cabeza(L), llamadaRec(cola(L)))} preserva orden. Si pones el nodo nuevo como acumulador antes de la recursión, la lista queda al revés.
+    \item \textbf{Cuidado con Listas de 1 elemento:} Si tu función accede a \texttt{cabeza(cola(L))}, tus casos base deben ser dos: lista vacía y lista de 1 elemento (\texttt{cola(L) == listaVacia}).
+    \item \textbf{No usar bucles prohibidos:} En Unidades I y II NO se permite \texttt{for}, \texttt{while}, ni listas \texttt{[]}. Todo debe resolverse con recursión pura sobre \texttt{lista.py} y \texttt{AB}.
+\end{itemize}
+
+\end{document}
